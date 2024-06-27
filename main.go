@@ -9,6 +9,6 @@ import (
 
 func main() {
 	app.Run("vsplit", func(w *unison.Window) {
-		vsplit.New().Layout(w.Content())
+		w.Content().AddChild(vsplit.New().Layout())
 	})
 }
